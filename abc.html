@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var head;
+        class Nodelist{
+            constructor(d){
+                this.value =d;
+                this.next =null;
+            }
+        }
+        var head = new Nodelist(1);
+        var second = new Nodelist(4);
+        var third = new Nodelist(3);
+        head.next = second;
+        second.next = third;
+        third.next =null;
+        while(head!=null){
+            console.log(head.value+" ");
+            head = head.next;
+        }
+    </script>
+</body>
+</html> 
